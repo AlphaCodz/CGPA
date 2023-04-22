@@ -1,12 +1,14 @@
 from django.db import models
 
 # Create your models here.
-class Course(models.Model):
+class Semester(models.Model):
     SEMESTER = (
-        ("FIRST SEMESTER", "FIRST SEMESTER"),
-        ("SECOND SEMESTER", "SECOND SEMESTER")
+        ("FIRST_SEMESTER", "FIRST_SEMESTER"),
+        ("SECOND_SEMESTER", "SECOND_SEMESTER")
     )
+    name = models.CharField(max_length=15, choices=SEMESTER)
     
+class Course(models.Model):
     GRADE = (
         ("A+", "A+"),
         ("A-", "A-"),
@@ -20,10 +22,10 @@ class Course(models.Model):
         
     )
     
-    semester = models.CharField(max_length=15, choices=SEMESTER)
     title = models.CharField(max_length=100)
     grade = models.CharField(max_length=2, choices=GRADE)
     credits = models.IntegerField()
+    semester = models.ForeignKey(Semester, on_delete=models.CASCADE, null=True)
     
     @property
     def qualify_points(self):
@@ -60,5 +62,3 @@ class Course(models.Model):
 
     class Meta:
         ordering = ("semester", "id")
-        
-    
