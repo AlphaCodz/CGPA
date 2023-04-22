@@ -1,0 +1,124 @@
+{% load static %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Inter:wght@300;400;500;600&family=Lexend+Deca:wght@400;700&family=Noto+Sans&family=Sofia+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <title>CGPACALC</title>
+    <style>
+      header {
+        background: #0085ff url(static/img/Pattern\ design\ for\ AU\ Festival.svg);
+      }
+    </style>
+  </head>
+    <header>
+      <h1>cgpacalc</h1>
+      <p>Calculate your CGPA with no hassle and in just a click</p>
+    </header>
+    <form action="">
+      <div class="container">
+        <div class="info">
+          <h1>1st Semester</h1>
+          <p>NB: min, of 4 courses, max. of 6 courses</p>
+        </div>
+        <div class="courses">
+          <section class="course_info">
+            <input type="text" placeholder="course title" />
+            <select class="gradeOption">
+              <option value="">grade</option>
+              <option value="A+">A+</option>
+              <option value="A-">A-</option>
+              <option value="B+">B+</option>
+              <option value="B-">B-</option>
+              <option value="C+">C+</option>
+              <option value="C-">C-</option>
+              <option value="D">D</option>
+              <option value="E">E</option>
+              <option value="F">F</option>
+            </select>
+            <select  class="credits">
+              <option value="">credits</option>
+            </select>
+            <i class="fa-solid fa-xmark"></i>
+          </section>
+          <section class="course_info">
+            <input type="text" placeholder="course title" />
+            <select class="gradeOption">
+              <option value="">grade</option>
+              <option value="A+">A+</option>
+              <option value="A-">A-</option>
+              <option value="B+">B+</option>
+              <option value="B-">B-</option>
+              <option value="C+">C+</option>
+              <option value="C-">C-</option>
+              <option value="D">D</option>
+              <option value="E">E</option>
+              <option value="F">F</option>
+            </select>
+            <select class="credits">
+              <option value="">credits</option>
+            </select>
+            <i class="fa-solid fa-xmark"></i>
+          </section>
+          <section class="course_info">
+            <input type="text" placeholder="course title" />
+            <select class="gradeOption">
+              <option value="">grade</option>
+              <option value="A+">A+</option>
+              <option value="A-">A-</option>
+              <option value="B+">B+</option>
+              <option value="B-">B-</option>
+              <option value="C+">C+</option>
+              <option value="C-">C-</option>
+              <option value="D">D</option>
+              <option value="E">E</option>
+              <option value="F">F</option>
+            </select>
+            <select class="credits">
+              <option value="">credits</option>
+            </select>
+            <i class="fa-solid fa-xmark"></i>
+          </section>
+          <section class="course_info" class="credits">
+            <input type="text" placeholder="course title" />
+            <select class="gradeOption">
+              <option value="">grade</option>
+              <option value="A+">A+</option>
+              <option value="A-">A-</option>
+              <option value="B+">B+</option>
+              <option value="B-">B-</option>
+              <option value="C+">C+</option>
+              <option value="C-">C-</option>
+              <option value="D">D</option>
+              <option value="E">E</option>
+              <option value="F">F</option>
+            </select>
+            <select  class="credits">
+              <option value="">credits</option>
+            </select>
+            <i class="fa-solid fa-xmark"></i>
+          </section>
+        </div>
+        <div class="wrapper">
+          <h3>gpa:0.00</h3>
+          <div class="btn">
+            <button class="addCourse">add course</button>
+            <button class="addSemester">add semester</button>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <script src="{% static 'script.js' %}"></script>
+</html>
+{% endblock body %} 

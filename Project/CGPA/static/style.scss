@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #ffffff;
+  font-family: "Inter", sans-serif;
+  position: relative;
+
+  header {
+    height: 50vh;
+    text-align: center;
+    display: grid;
+    place-content: center;
+    width: 100%;
+    //   background:#0085ff url(./img/Pattern\ design\ for\ AU\ Festival.svg);
+    color: white;
+    h1 {
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 2.7rem;
+    }
+    p {
+      width: 15rem;
+      line-height: 1.3em;
+      font-weight: 400;
+    }
+  }
+  form {
+    background-color: #ffffff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 15em;
+    padding: 1em;
+    border-radius: 2em;
+
+    h1 {
+      text-transform: capitalize;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    p {
+      font-size: 1rem;
+      margin: 1em 0 0.5em 0;
+      color: #7c7a7a;
+    }
+    .wrapper {
+      text-align: right;
+      margin-bottom: 3em;
+
+      h3 {
+        text-transform: uppercase;
+        margin: 1.2em 0;
+        color: #1e1e1e;
+      }
+      button {
+        background-color: #0085ff;
+        border: none;
+        color: #ffffff;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 1.1em;
+        padding: 0.5em 1.5em;
+        border-radius: 0.3em;
+
+        &:hover {
+          background-color: #7c7a7a;
+        }
+      }
+      .btn {
+        display: flex;
+        justify-content: space-between;
+      }
+      .addCourse {
+        position: relative;
+        left: 0;
+        margin-left: 0;
+      }
+    }
+    .course_info {
+      margin-bottom: 1em;
+      width: 100%;
+      display: flex;
+      position: relative;
+      justify-content: space-between;
+      align-items: center;
+
+      input {
+        border: 1px solid #7c7a7a;
+
+        font-size: 1em;
+        text-transform: capitalize;
+        height: 3.3em;
+        border-radius: 0.4em;
+        width: 40%;
+        outline: none;
+      }
+      select {
+        display: flex;
+        justify-content: space-between;
+        background-color: #ffffff;
+        border: 0;
+        outline: 1px solid #7c7a7a;
+        font-size: 1em;
+        border-radius: 0.4em;
+        text-transform: capitalize;
+        border-right: 10px solid transparent;
+      }
+      .credits,
+      .gradeOption {
+        width: 5em;
+        color: #7c7a7a;
+        height: 3.3em;
+        width: 35%;
+        padding: 1em 1em;
+      }
+      .gradeOption {
+        width: 7em;
+      }
+      i {
+        border: 1px solid #7c7a7a;
+        border-radius: 50%;
+        padding: 0.3em;
+        color: #7c7a7a;
+        font-size: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: -2.7em;
+      }
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  form {
+    width: 95%;
+    padding-right: 3em !important;
+    max-width: 900px;
+  }
+  .gradeOption,
+  .credits {
+    margin-left: 0.3em;
+  }
+  input {
+    padding: 0 1em 0 0.5em;
+  }
+  button {
+    padding: 0.5em 1em !important;
+  }
+}
+@media screen and (min-width: 500.99px) {
+  form {
+    width: 80% !important;
+    max-width: 700px;
+    padding: 2.5em !important;
+    padding-right: 4em !important;
+  }
+  input {
+    padding: 1em 0 1em 1em;
+  }
+}
